@@ -45,14 +45,14 @@
 /* 8 bit Flag*/		
 typedef union __bts8_variables{
  struct bts8_struct_variables{
-   uint8_t BIT_0:1;
+     uint8_t BIT_0:1;
 	 uint8_t BIT_1:1;
 	 uint8_t BIT_2:1;
 	 uint8_t BIT_3:1;
 	 uint8_t BIT_4:1;
 	 uint8_t BIT_5:1;
 	 uint8_t BIT_6:1;
-   uint8_t BIT_7:1;
+     uint8_t BIT_7:1;
  }Bits;
  uint8_t Bulk;
 }bts8_t;
@@ -60,14 +60,14 @@ typedef union __bts8_variables{
 /* 16 bit Flag*/
 typedef union __bts16_variables{
  struct bts16_struct_variables{
-   uint16_t BIT_0:1;
+     uint16_t BIT_0:1;
 	 uint16_t BIT_1:1;
 	 uint16_t BIT_2:1;
 	 uint16_t BIT_3:1;
 	 uint16_t BIT_4:1;
 	 uint16_t BIT_5:1;
 	 uint16_t BIT_6:1;
-   uint16_t BIT_7:1;
+     uint16_t BIT_7:1;
 	 uint16_t BIT_8:1;
 	 uint16_t BIT_9:1;
 	 uint16_t BIT_10:1;
@@ -75,7 +75,7 @@ typedef union __bts16_variables{
 	 uint16_t BIT_12:1;
 	 uint16_t BIT_13:1;
 	 uint16_t BIT_14:1;
-   uint16_t BIT_15:1;
+     uint16_t BIT_15:1;
  }Bits;
  uint16_t Bulk;
 }bts16_t;
@@ -90,7 +90,7 @@ typedef union __bts32_variables{
 	uint32_t BIT_4:1;
 	uint32_t BIT_5:1;
 	uint32_t BIT_6:1;
-  uint32_t BIT_7:1;
+    uint32_t BIT_7:1;
 	uint32_t BIT_8:1;
 	uint32_t BIT_9:1;
 	uint32_t BIT_10:1;
@@ -106,7 +106,7 @@ typedef union __bts32_variables{
 	uint32_t BIT_20:1;
 	uint32_t BIT_21:1;
 	uint32_t BIT_22:1;
-  uint32_t BIT_23:1;
+    uint32_t BIT_23:1;
 	uint32_t BIT_24:1;
 	uint32_t BIT_25:1;
 	uint32_t BIT_26:1;
@@ -123,14 +123,14 @@ typedef union __bts32_variables{
 /* 64 bit Flag*/
 typedef union __bts64_variables{
  struct bts64_struct_variables{
-  uint64_t BIT_0:1;
+    uint64_t BIT_0:1;
 	uint64_t BIT_1:1;
 	uint64_t BIT_2:1;
 	uint64_t BIT_3:1;
 	uint64_t BIT_4:1;
 	uint64_t BIT_5:1;
 	uint64_t BIT_6:1;
-  uint64_t BIT_7:1;
+    uint64_t BIT_7:1;
 	uint64_t BIT_8:1;
 	uint64_t BIT_9:1;
 	uint64_t BIT_10:1;
@@ -138,7 +138,7 @@ typedef union __bts64_variables{
 	uint64_t BIT_12:1;
 	uint64_t BIT_13:1;
 	uint64_t BIT_14:1;
-  uint64_t BIT_15:1;
+    uint64_t BIT_15:1;
 	uint64_t BIT_16:1;
 	uint64_t BIT_17:1;
 	uint64_t BIT_18:1;
@@ -146,28 +146,28 @@ typedef union __bts64_variables{
 	uint64_t BIT_20:1;
 	uint64_t BIT_21:1;
 	uint64_t BIT_22:1;
-  uint64_t BIT_23:1;
+    uint64_t BIT_23:1;
 	uint64_t BIT_24:1;
 	uint64_t BIT_25:1;
 	uint64_t BIT_26:1;
 	uint64_t BIT_27:1;
 	uint64_t BIT_28:1;
-  uint64_t BIT_29:1;
+    uint64_t BIT_29:1;
 	uint64_t BIT_30:1;
-  uint64_t BIT_31:1;
+    uint64_t BIT_31:1;
  }Bits;
  uint64_t Bulk;
 }bts64_t;
 
 /* Universal type def*/
 typedef union __universal_void_union{
- uint8_t Integer8u[4];
- int8_t Integer8s[4];
- uint16_t Integer16u[2];
- int16_t Integer16s[2];
- uint32_t Integer32u;
- int32_t Integer32s;
- float Floating;
+  uint8_t Integer8u[4];
+  int8_t Integer8s[4];
+  uint16_t Integer16u[2];
+  int16_t Integer16s[2];
+  uint32_t Integer32u;
+  int32_t Integer32s;
+  float Floating;
 }void_handle;
 
 /* Hysteresis filtresi*/
@@ -268,6 +268,8 @@ typedef struct __stack_variables{
 	task_t *TaskStack[TASK_STACK_SIZE];
 }stack_t;
 
+
+
 #if __COS_BUTTON_StackSize<8
 extern __IO bts8_t BUTTON_IRQ_FLAG;
 #elif __COS_BUTTON_StackSize<16
@@ -301,11 +303,14 @@ extern float COS_FILTER_ReMapping(float Value, float Actual_Max, float Actual_Mi
 /* end of Range filter hesapla --------------------------------------------------------------------------*/
 
 
-/* Menü olay fonksiyonu */
+
+/* Callback functions */
 extern void COS_MENU_EventHandle(menu_t *Menu);
 /* Görev olay fonksiyonlari */
 extern void COS_TASK_TimeEllapsedCallBack(task_t *Task);
 extern void COS_TASK_FastDriveCallBack(void);
+
+
 
 
 /*             MENÜ functions           */
