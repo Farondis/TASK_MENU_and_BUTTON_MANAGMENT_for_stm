@@ -1,8 +1,19 @@
 
 /* Consecutive Operating System
-*  COS Library Functions
-*  Task and button managment
-*  Including basic MultiTasking algorithm
+
+
+	*   Sercan DEMIRHAN
+	*	22.10.2020
+	  
+	General purpose library.
+
+	*	Task 
+	*   Menu 
+	*   Button 
+
+	Managment for embedded projects.
+
+
 */
 
 #ifndef __STM_COSLIB_H__

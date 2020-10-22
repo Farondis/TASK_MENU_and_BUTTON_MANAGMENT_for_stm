@@ -1,3 +1,22 @@
+
+/* Consecutive Operating System
+
+
+	*   Sercan DEMIRHAN
+	*	22.10.2020
+	  
+	General purpose library.
+
+	*	Task 
+	*   Menu 
+	*   Button 
+
+	Managment for embedded projects.
+
+
+*/
+
+
 #include "stm_coslib.h"
 
 
